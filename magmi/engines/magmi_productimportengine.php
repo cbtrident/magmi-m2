@@ -1864,7 +1864,7 @@ class Magmi_ProductImportEngine extends Magmi_Engine
                 // if magmi_qty_absolute flag is not set, then use standard "relative" qty parsing.
                 if (!isset($item["magmi_qty_absolute"]) || $item["magmi_qty_absolute"] == 0) {
                     // test for relative qty
-                    //  PHP 8.1 change - test for array - we get an error is $item["qty"] is not an array 
+                    //  PHP 8.1 change - test for array - we get an error if $item["qty"] is not an array 
                 	if (is_array($item["qty"])) {
                   	if ($item["qty"][0] == "+" || $item["qty"][0] == "-") {
                      $relqty = getRelative($item["qty"]);
