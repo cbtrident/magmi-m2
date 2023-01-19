@@ -37,8 +37,7 @@ class DirbasedConfig extends Properties
     public function getLastSaved($fmt)
     {
         if (file_exists($this->inifile)) {
-           /* $lastsaved = strftime($fmt, filemtime($this->inifile));*/
-	$lastsaved = date($fmt, filemtime($this->inifile));
+           $lastsaved = date($fmt, filemtime($this->inifile));
         } else {
             $lastsaved = "never";
         }
