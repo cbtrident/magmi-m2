@@ -344,7 +344,7 @@ class ItemIndexer extends Magmi_ItemProcessor
 
     public function buildUrlRewrite($pid, $dorewrite = false, $store = 'admin')
     {
-        $purlk = $this->builProductUrlRewrite($pid, $dorewrite, $store);
+        $purlk = $this->builProductUrlRewrite($pid, $store, $dorewrite);
         if ($this->getParam("OTFI:usecatinurl") && !is_null($purlk)) {
             $this->buildUrlCatProdRewrite($pid, $purlk);
         }
